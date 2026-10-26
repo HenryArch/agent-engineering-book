@@ -1,0 +1,233 @@
+{
+  "warning": "Tiny synthetic corpus; no semantic retrieval or generalization claim.",
+  "raw": {
+    "metadata_filter": false,
+    "recall_at_1": 0.75,
+    "mrr": 0.875,
+    "queries": [
+      {
+        "query": {
+          "text": "普通 商品 退款",
+          "category": "normal",
+          "date": 20260601,
+          "tenant": "shop-a",
+          "gold": "normal-v1"
+        },
+        "ranking": [
+          {
+            "id": "normal-v1",
+            "score": 0.958275
+          },
+          {
+            "id": "normal-v2",
+            "score": 0.958275
+          },
+          {
+            "id": "private-other",
+            "score": 0.904316
+          },
+          {
+            "id": "custom-v1",
+            "score": 0.340191
+          },
+          {
+            "id": "digital-v1",
+            "score": 0.340191
+          },
+          {
+            "id": "shipping",
+            "score": 0.079966
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": {
+          "text": "普通 商品 退款",
+          "category": "normal",
+          "date": 20260801,
+          "tenant": "shop-a",
+          "gold": "normal-v2"
+        },
+        "ranking": [
+          {
+            "id": "normal-v1",
+            "score": 0.958275
+          },
+          {
+            "id": "normal-v2",
+            "score": 0.958275
+          },
+          {
+            "id": "private-other",
+            "score": 0.904316
+          },
+          {
+            "id": "custom-v1",
+            "score": 0.340191
+          },
+          {
+            "id": "digital-v1",
+            "score": 0.340191
+          },
+          {
+            "id": "shipping",
+            "score": 0.079966
+          }
+        ],
+        "recall_at_1": 0,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "query": {
+          "text": "定制 商品 退款",
+          "category": "custom",
+          "date": 20260801,
+          "tenant": "shop-a",
+          "gold": "custom-v1"
+        },
+        "ranking": [
+          {
+            "id": "custom-v1",
+            "score": 2.002403
+          },
+          {
+            "id": "digital-v1",
+            "score": 0.340191
+          },
+          {
+            "id": "normal-v1",
+            "score": 0.299594
+          },
+          {
+            "id": "normal-v2",
+            "score": 0.299594
+          },
+          {
+            "id": "private-other",
+            "score": 0.282724
+          },
+          {
+            "id": "shipping",
+            "score": 0.079966
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": {
+          "text": "数字 商品 下载 退款",
+          "category": "digital",
+          "date": 20260801,
+          "tenant": "shop-a",
+          "gold": "digital-v1"
+        },
+        "ranking": [
+          {
+            "id": "digital-v1",
+            "score": 3.664614
+          },
+          {
+            "id": "custom-v1",
+            "score": 0.340191
+          },
+          {
+            "id": "normal-v1",
+            "score": 0.299594
+          },
+          {
+            "id": "normal-v2",
+            "score": 0.299594
+          },
+          {
+            "id": "private-other",
+            "score": 0.282724
+          },
+          {
+            "id": "shipping",
+            "score": 0.079966
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      }
+    ]
+  },
+  "filtered": {
+    "metadata_filter": true,
+    "recall_at_1": 1.0,
+    "mrr": 1.0,
+    "queries": [
+      {
+        "query": {
+          "text": "普通 商品 退款",
+          "category": "normal",
+          "date": 20260601,
+          "tenant": "shop-a",
+          "gold": "normal-v1"
+        },
+        "ranking": [
+          {
+            "id": "normal-v1",
+            "score": 0.958275
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": {
+          "text": "普通 商品 退款",
+          "category": "normal",
+          "date": 20260801,
+          "tenant": "shop-a",
+          "gold": "normal-v2"
+        },
+        "ranking": [
+          {
+            "id": "normal-v2",
+            "score": 0.958275
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": {
+          "text": "定制 商品 退款",
+          "category": "custom",
+          "date": 20260801,
+          "tenant": "shop-a",
+          "gold": "custom-v1"
+        },
+        "ranking": [
+          {
+            "id": "custom-v1",
+            "score": 2.002403
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "query": {
+          "text": "数字 商品 下载 退款",
+          "category": "digital",
+          "date": 20260801,
+          "tenant": "shop-a",
+          "gold": "digital-v1"
+        },
+        "ranking": [
+          {
+            "id": "digital-v1",
+            "score": 3.664614
+          }
+        ],
+        "recall_at_1": 1,
+        "reciprocal_rank": 1.0
+      }
+    ]
+  }
+}

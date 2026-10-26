@@ -1,0 +1,254 @@
+[
+  {
+    "id": "T01-valid",
+    "scenario": "valid",
+    "family": "valid",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "refunded",
+      "utterance": "completed",
+      "count": 1,
+      "amount_cents": 8000
+    }
+  },
+  {
+    "id": "T02-expired",
+    "scenario": "expired",
+    "family": "expired",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 15
+    },
+    "expected": {
+      "outcome": "deny",
+      "utterance": "denied",
+      "count": 0,
+      "amount_cents": 0
+    }
+  },
+  {
+    "id": "T03-unauthorized",
+    "scenario": "unauthorized",
+    "family": "unauthorized",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-99",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "deny",
+      "utterance": "denied",
+      "count": 0,
+      "amount_cents": 0
+    }
+  },
+  {
+    "id": "T04-unconfirmed",
+    "scenario": "unconfirmed",
+    "family": "unconfirmed",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": false,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "needs_input",
+      "utterance": "needs_confirmation",
+      "count": 0,
+      "amount_cents": 0
+    }
+  },
+  {
+    "id": "T05-repeated",
+    "scenario": "repeated",
+    "family": "repeated",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "refunded",
+      "utterance": "completed",
+      "count": 1,
+      "amount_cents": 8000
+    }
+  },
+  {
+    "id": "T06-response_lost",
+    "scenario": "response_lost",
+    "family": "response_lost",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "refunded",
+      "utterance": "completed",
+      "count": 1,
+      "amount_cents": 8000
+    }
+  },
+  {
+    "id": "T07-partial",
+    "scenario": "partial",
+    "family": "partial",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 3000,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "refunded",
+      "utterance": "completed",
+      "count": 1,
+      "amount_cents": 5000
+    }
+  },
+  {
+    "id": "T08-fully_refunded",
+    "scenario": "fully_refunded",
+    "family": "fully_refunded",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 8000,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "deny",
+      "utterance": "denied",
+      "count": 0,
+      "amount_cents": 0
+    }
+  },
+  {
+    "id": "T09-injection",
+    "scenario": "injection",
+    "family": "injection",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "refunded",
+      "utterance": "completed",
+      "count": 1,
+      "amount_cents": 8000
+    }
+  },
+  {
+    "id": "T10-missing_order",
+    "scenario": "missing_order",
+    "family": "missing_order",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "deny",
+      "utterance": "denied",
+      "count": 0,
+      "amount_cents": 0
+    }
+  },
+  {
+    "id": "T11-tool_unavailable",
+    "scenario": "tool_unavailable",
+    "family": "tool_unavailable",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "escalated",
+      "utterance": "unknown",
+      "count": 0,
+      "amount_cents": 0
+    }
+  },
+  {
+    "id": "T12-pending",
+    "scenario": "pending",
+    "family": "pending",
+    "principal": "U-8",
+    "order_id": "O-102",
+    "confirmed": true,
+    "input": "请处理订单 O-102 的退款",
+    "initial": {
+      "owner": "U-8",
+      "paid_cents": 8000,
+      "refunded_cents": 0,
+      "days": 3
+    },
+    "expected": {
+      "outcome": "pending",
+      "utterance": "pending",
+      "count": 1,
+      "amount_cents": 8000
+    }
+  }
+]

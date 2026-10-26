@@ -1,0 +1,104 @@
+{
+  "cross_entropy": {
+    "history": [
+      {
+        "epoch": 0,
+        "cross_entropy": 1.09861
+      },
+      {
+        "epoch": 20,
+        "cross_entropy": 0.49006
+      },
+      {
+        "epoch": 100,
+        "cross_entropy": 0.1299
+      },
+      {
+        "epoch": 200,
+        "cross_entropy": 0.06544
+      }
+    ],
+    "training_points": [
+      {
+        "x": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "expected": 0,
+        "predicted": 0,
+        "probabilities": [
+          0.9179,
+          0.0388,
+          0.0434
+        ]
+      },
+      {
+        "x": [
+          1.0,
+          0.0,
+          1.0
+        ],
+        "expected": 1,
+        "predicted": 1,
+        "probabilities": [
+          0.0453,
+          0.9539,
+          0.0008
+        ]
+      },
+      {
+        "x": [
+          1.0,
+          1.0,
+          0.0
+        ],
+        "expected": 2,
+        "predicted": 2,
+        "probabilities": [
+          0.061,
+          0.0174,
+          0.9215
+        ]
+      },
+      {
+        "x": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "expected": 1,
+        "predicted": 1,
+        "probabilities": [
+          0.0067,
+          0.954,
+          0.0393
+        ]
+      }
+    ],
+    "limit": "Four hand-written points: no generalization claim."
+  },
+  "preference": {
+    "history": [
+      {
+        "step": 0,
+        "theta": 0.0,
+        "dpo_loss": 0.69315,
+        "probability_of_preferred": 0.5
+      },
+      {
+        "step": 20,
+        "theta": 0.8906,
+        "dpo_loss": 0.49509,
+        "probability_of_preferred": 0.709
+      },
+      {
+        "step": 100,
+        "theta": 3.0159,
+        "dpo_loss": 0.19997,
+        "probability_of_preferred": 0.95329
+      }
+    ],
+    "limit": "Toy two-response DPO objective, no transformer, rollout or RL environment."
+  }
+}

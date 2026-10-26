@@ -1,0 +1,25 @@
+{
+  "warning": "Synthetic illustration; eight clusters are a small sample, and bootstrap does not establish representativeness.",
+  "clustered": {
+    "difference": 0.25,
+    "percentile_interval": [
+      -0.25,
+      0.625
+    ],
+    "groups": 8,
+    "rows": 32,
+    "repeats": 2000,
+    "seed": 7
+  },
+  "incorrect_row_independence_assumption": {
+    "difference": 0.25,
+    "percentile_interval": [
+      0.03125,
+      0.5
+    ],
+    "groups": 32,
+    "rows": 32,
+    "repeats": 2000,
+    "seed": 7
+  }
+}
